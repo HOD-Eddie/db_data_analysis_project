@@ -69,9 +69,6 @@ LIMIT 10;
 
 **Chart:** A horizontal bar chart of these 10 postings shows one clear outlier — the $960,000 listing at East River Electric Power Cooperative sits well above the rest of the field, which clusters more tightly between $375,000 and $585,000.
 
-*[Insert bar chart image here — Top 10 highest-paying Data Scientist roles by company]*
-
----
 
 ### Query 2 — What skills are required for the top-paying jobs?
 
@@ -116,10 +113,6 @@ ORDER BY avg_annual_salary DESC;
 
 **Chart:** Python appears in 8 of the 10 top-paying postings, far outpacing every other skill. Linux, SQL, AWS, Excel, and Docker form a clear second tier, each showing up in 3–4 postings.
 
-*[Insert horizontal bar chart image here — Skill frequency across top 10 highest-paying Data Engineer postings]*
-
----
-
 ### Query 3 — What are the most in-demand skills since 2023?
 
 This query counts how often each skill appears across job postings for a given role, surfacing the top 10 most in-demand skills.
@@ -154,9 +147,6 @@ LIMIT 10;
 
 **Chart:** SQL and Python lead by a wide margin, each appearing in over 100,000 postings — roughly double the third-place skill, AWS.
 
-*[Insert horizontal bar chart image here — Top 10 in-demand skills for Data Engineer roles]*
-
----
 
 ### Query 4 — What are the top-paying skills?
 
@@ -206,9 +196,6 @@ LIMIT 20;
 
 **Chart:** Unlike the demand list in Query 3, the top-paying skills here are largely niche or specialized (Debian, RingCentral, Lua, Haskell) rather than mainstream — a sign that rarity, not popularity, drives the highest average salaries.
 
-*[Insert bar chart image here — Top 20 skills by average annual salary]*
-
----
 
 ### Query 5 — What are the most optimal skills to learn?
 
@@ -284,8 +271,6 @@ LIMIT 30;
 
 **Chart:** Plotting job count against average salary, Kafka and Spark stand out as the genuine "optimal" picks — both have 3,000+ postings and salaries above $140,000. Debian and RingCentral pay even more on average, but their job counts (under 200) make them a far riskier specialization.
 
-*[Insert scatter plot image here — Skill demand (x-axis) vs. average salary (y-axis), highlighting "optimal" skills in the upper-right quadrant]*
-
 ## 5. What I Learned
 
 Working through these five queries end-to-end reinforced and deepened several core SQL and PostgreSQL concepts:
@@ -297,7 +282,7 @@ Working through these five queries end-to-end reinforced and deepened several co
 - **Filtering with WHERE vs. HAVING** — Filtering out `NULL` salaries before aggregation (`WHERE salary_year_avg IS NOT NULL`) reinforced the distinction between filtering raw rows before grouping versus filtering aggregated results.
 - **Sorting and Limiting Results** — Combining `ORDER BY` (including multi-column sorts, as in Query 5's sort by salary *then* job count) with `LIMIT` to consistently surface "top N" results.
 - **Type Casting** — Using `::DATE` to strip the time component from a timestamp column (`job_posted_date::DATE`) in Query 1, a small but practical PostgreSQL-specific convenience.
-- **Query Design as Iteration** — Perhaps the biggest non-technical lesson: each query built on the one before it. Starting with a simple filtered `SELECT`, then layering in subqueries, then CTEs, mirrored how real analytical questions evolve — and how SQL complexity should grow only as far as the question demands.
+- **Query Design as Iteration** — Perhaps the biggest non-technical lesson: each query is built on the one before it. Starting with a simple filtered `SELECT`, then layering in subqueries, then CTEs, mirrored how real analytical questions evolve — and how SQL complexity should grow only as far as the question demands.
 - **(While not directly used in these queries) Indexing** — Exploring this dataset highlighted *why* indexing matters: columns repeatedly used in `JOIN` and `WHERE` clauses (like `job_id`, `skill_id`, and `company_id`) are exactly the kind of columns that benefit from indexes in a larger, production-scale dataset, since they're scanned constantly during query execution.
 
 ## 6. Conclusions
