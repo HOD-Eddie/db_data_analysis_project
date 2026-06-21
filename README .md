@@ -67,7 +67,7 @@ LIMIT 10;
 | Truist Financial | Charlotte, NC | $375,000 |
 | PayPal | Austin, TX | $375,000 |
 
-**Chart:** A horizontal bar chart of these 10 postings shows one clear outlier — the $960,000 listing at East River Electric Power Cooperative sits well above the rest of the field, which clusters more tightly between $375,000 and $585,000.
+A horizontal bar chart of these 10 postings shows one clear outlier — the $960,000 listing at East River Electric Power Cooperative sits well above the rest of the field, which clusters more tightly between $375,000 and $585,000.
 
 
 ### Query 2 — What skills are required for the top-paying jobs?
@@ -111,7 +111,7 @@ ORDER BY avg_annual_salary DESC;
 | MongoDB | 2 |
 | (Scala, Spark, SQL Server, PostgreSQL, Redshift, Unix, Splunk, Jenkins, Tableau, Looker, Kafka, Airflow, Go) | 1 each |
 
-**Chart:** Python appears in 8 of the 10 top-paying postings, far outpacing every other skill. Linux, SQL, AWS, Excel, and Docker form a clear second tier, each showing up in 3–4 postings.
+Python appears in 8 of the 10 top-paying postings, far outpacing every other skill. Linux, SQL, AWS, Excel, and Docker form a clear second tier, each showing up in 3–4 postings.
 
 ### Query 3 — What are the most in-demand skills since 2023?
 
@@ -145,7 +145,7 @@ LIMIT 10;
 | Scala | 28,791 |
 | Databricks | 27,532 |
 
-**Chart:** SQL and Python lead by a wide margin, each appearing in over 100,000 postings — roughly double the third-place skill, AWS.
+SQL and Python lead by a wide margin, each appearing in over 100,000 postings — roughly double the third-place skill, AWS.
 
 
 ### Query 4 — What are the top-paying skills?
@@ -194,7 +194,7 @@ LIMIT 20;
 | Kafka | $144,753.82 |
 | PyTorch | $144,470.14 |
 
-**Chart:** Unlike the demand list in Query 3, the top-paying skills here are largely niche or specialized (Debian, RingCentral, Lua, Haskell) rather than mainstream — a sign that rarity, not popularity, drives the highest average salaries.
+Unlike the demand list in Query 3, the top-paying skills here are largely niche or specialized (Debian, RingCentral, Lua, Haskell) rather than mainstream — a sign that rarity, not popularity, drives the highest average salaries.
 
 
 ### Query 5 — What are the most optimal skills to learn?
@@ -269,7 +269,7 @@ LIMIT 30;
 | Redshift | 806 | $140,791.90 |
 | Airtable | 11 | $140,615.34 |
 
-**Chart:** Plotting job count against average salary, Kafka and Spark stand out as the genuine "optimal" picks — both have 3,000+ postings and salaries above $140,000. Debian and RingCentral pay even more on average, but their job counts (under 200) make them a far riskier specialization.
+Plotting job count against average salary, Kafka and Spark stand out as the genuine "optimal" picks — both have 3,000+ postings and salaries above $140,000. Debian and RingCentral pay even more on average, but their job counts (under 200) make them a far riskier specialization.
 
 ## 5. What I Learned
 
